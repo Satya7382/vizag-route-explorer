@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-10 bg-white shadow-md">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold text-vizag-navy">
-          Way to Go
+          Way 2 Go
         </Link>
         
         <div className="space-x-6">

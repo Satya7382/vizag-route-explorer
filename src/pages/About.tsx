@@ -9,7 +9,7 @@ const About = () => {
       
       <div className="flex-grow bg-gray-50 py-12">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold mb-2 text-vizag-navy">About Way to Go</h1>
+          <h1 className="text-3xl font-bold mb-2 text-vizag-navy">About Way 2 Go</h1>
           <p className="text-gray-600 mb-8">Learn more about our mission to make traveling in Vizag easier.</p>
           
           <div className="grid gap-8">
@@ -20,7 +20,7 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
-                  Way to Go is dedicated to making public transportation in Visakhapatnam accessible to everyone. 
+                  Way 2 Go is dedicated to making public transportation in Visakhapatnam accessible to everyone. 
                   Our app provides accurate information about bus routes connecting the most popular destinations in the city, 
                   helping both tourists and locals navigate the City of Destiny with confidence.
                 </p>
@@ -76,7 +76,7 @@ const About = () => {
       {/* Footer */}
       <footer className="bg-vizag-navy text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>© 2025 Way to Go - Visakhapatnam Bus Routes Explorer</p>
+          <p>© 2025 Way 2 Go - Visakhapatnam Bus Routes Explorer</p>
         </div>
       </footer>
     </div>

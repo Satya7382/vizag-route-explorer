@@ -32,7 +32,7 @@ const Index = () => {
       
       {/* Features Section */}
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">How Way to Go Helps You</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">How Way 2 Go Helps You</h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
@@ -88,7 +88,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-vizag-navy text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>© 2025 Way to Go - Visakhapatnam Bus Routes Explorer</p>
+          <p>© 2025 Way 2 Go - Visakhapatnam Bus Routes Explorer</p>
         </div>
       </footer>
     </div>
