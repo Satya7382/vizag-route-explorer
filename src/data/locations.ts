@@ -77,6 +77,41 @@ const locations: Location[] = [
     description: "International airport serving the city and surrounding regions",
     image: "https://images.unsplash.com/photo-1599880650988-aa7f3b4055fa?auto=format&fit=crop&q=80&w=800",
     isPopular: true
+  },
+  {
+    id: 11,
+    name: "Zoo Park",
+    description: "Indira Gandhi Zoological Park with diverse wildlife",
+    image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
+  },
+  {
+    id: 12,
+    name: "Rushikonda Beach",
+    description: "Popular beach known for water sports and golden sands",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
+  },
+  {
+    id: 13,
+    name: "Ross Hill Church",
+    description: "Historic church with panoramic views of the harbor",
+    image: "https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
+  },
+  {
+    id: 14,
+    name: "Dwarapalli",
+    description: "Residential and commercial hub in Visakhapatnam",
+    image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
+  },
+  {
+    id: 15,
+    name: "RTC Complex",
+    description: "Major transport hub for city and intercity buses",
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
   }
 ];
 

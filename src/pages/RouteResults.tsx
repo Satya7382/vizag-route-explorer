@@ -9,7 +9,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Separator } from '@/components/ui/separator';
 import { findRoutes } from '@/data/busRoutes';
 import locations from '@/data/locations';
-import { Bus, Clock, Map, Repeat, ArrowLeft } from 'lucide-react';
+import { Bus, Clock, Map, Repeat, ArrowLeft, AlertTriangle } from 'lucide-react';
 
 const RouteResults = () => {
   const [searchParams] = useSearchParams();
@@ -41,7 +41,7 @@ const RouteResults = () => {
     const route = findRoutes(parseInt(fromId), parseInt(toId));
     
     if (!route) {
-      setError("No direct bus routes found between these locations. Try a different route.");
+      setError("No bus route information found between these locations. Try a different route.");
       return;
     }
     
@@ -128,19 +128,33 @@ const RouteResults = () => {
                     
                     <Separator className="my-4" />
                     
+                    {!busRoute.hasDirectBus && (
+                      <Alert className="mb-4 bg-amber-50 border-amber-200">
+                        <AlertTriangle className="h-4 w-4 text-amber-600" />
+                        <AlertTitle className="text-amber-800">No Direct Buses Available</AlertTitle>
+                        <AlertDescription className="text-amber-700">
+                          {busRoute.notes}
+                        </AlertDescription>
+                      </Alert>
+                    )}
+                    
                     <div className="space-y-4">
                       <div>
                         <h3 className="text-lg font-semibold">Bus Numbers</h3>
-                        <div className="flex flex-wrap gap-2 mt-2">
-                          {busRoute.busNumbers.map((busNumber: string) => (
-                            <div 
-                              key={busNumber} 
-                              className="bg-vizag-teal/10 text-vizag-teal px-3 py-1 rounded-full font-medium"
-                            >
-                              {busNumber}
-                            </div>
-                          ))}
-                        </div>
+                        {busRoute.busNumbers.length > 0 ? (
+                          <div className="flex flex-wrap gap-2 mt-2">
+                            {busRoute.busNumbers.map((busNumber: string) => (
+                              <div 
+                                key={busNumber} 
+                                className="bg-vizag-teal/10 text-vizag-teal px-3 py-1 rounded-full font-medium"
+                              >
+                                {busNumber}
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-gray-500 mt-2">No direct bus numbers available.</p>
+                        )}
                       </div>
                       
                       <div className="grid grid-cols-2 gap-4">
@@ -160,6 +174,13 @@ const RouteResults = () => {
                           </div>
                         </div>
                       </div>
+                      
+                      {busRoute.notes && (
+                        <div className="mt-4">
+                          <h4 className="text-sm font-medium">Notes</h4>
+                          <p className="text-sm text-gray-600 mt-1">{busRoute.notes}</p>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -169,6 +190,9 @@ const RouteResults = () => {
                 <div className="text-sm text-gray-600">
                   <strong>Note:</strong> Bus timings may vary based on traffic conditions. 
                   It's advisable to reach the bus stop 10 minutes before the scheduled time.
+                </div>
+                <div className="text-sm text-gray-600">
+                  <strong>RTC Complex</strong> serves as the main transport hub for transferring between routes.
                 </div>
               </CardFooter>
             </Card>
