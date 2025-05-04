@@ -1,0 +1,69 @@
+
+export interface Location {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+  isPopular: boolean;
+}
+
+const locations: Location[] = [
+  {
+    id: 1,
+    name: "RK Beach",
+    description: "The famous beach road with stunning coastline views",
+    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
+  },
+  {
+    id: 2,
+    name: "Kailasagiri",
+    description: "Hilltop park with panoramic views of the city and sea",
+    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
+  },
+  {
+    id: 3,
+    name: "Simhachalam Temple",
+    description: "Ancient Hindu temple on the hill",
+    image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
+  },
+  {
+    id: 4,
+    name: "Araku Valley",
+    description: "Beautiful hill station with coffee plantations",
+    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
+  },
+  {
+    id: 5,
+    name: "Submarine Museum",
+    description: "Real submarine converted into a museum",
+    image: "https://images.unsplash.com/photo-1533894321612-38c289def3d2?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
+  },
+  {
+    id: 6,
+    name: "Yarada Beach",
+    description: "Secluded beach surrounded by hills",
+    image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
+  },
+  {
+    id: 7,
+    name: "Borra Caves",
+    description: "Ancient limestone caves with stunning formations",
+    image: "https://images.unsplash.com/photo-1484406566174-9da000fda645?auto=format&fit=crop&q=80&w=800", 
+    isPopular: true
+  },
+  {
+    id: 8,
+    name: "VMRDA Park",
+    description: "Large urban park with musical fountain",
+    image: "https://images.unsplash.com/photo-1572111504021-40abd3479ddb?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
+  }
+];
+
+export default locations;
