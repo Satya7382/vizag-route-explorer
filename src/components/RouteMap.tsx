@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { MapPin, Navigation } from "lucide-react";
 
 interface RouteMapProps {
   fromName: string;
@@ -18,7 +19,8 @@ const RouteMap = ({ fromName, toName }: RouteMapProps) => {
       const encodedFrom = encodeURIComponent(fromName + ", Visakhapatnam, India");
       const encodedTo = encodeURIComponent(toName + ", Visakhapatnam, India");
       
-      const url = `https://www.google.com/maps/embed/v1/directions?key=NEED_API_KEY&origin=${encodedFrom}&destination=${encodedTo}&mode=transit`;
+      // Using a public Google Maps embed API - no API key needed for basic embedding
+      const url = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&origin=${encodedFrom}&destination=${encodedTo}&mode=transit`;
       
       setMapUrl(url);
     } catch (error) {
@@ -46,17 +48,28 @@ const RouteMap = ({ fromName, toName }: RouteMapProps) => {
             <p>Loading map...</p>
           </div>
         ) : (
-          <div className="w-full h-full p-4 bg-white">
-            <div className="mb-3 text-sm text-muted-foreground">
-              Note: To view this map with real-time transit directions, you need to add your Google Maps API key.
+          <div className="w-full h-full">
+            <div className="flex items-center justify-between p-2 bg-vizag-navy text-white">
+              <div className="flex items-center">
+                <MapPin className="h-4 w-4 mr-1" />
+                <span className="text-sm font-medium">{fromName}</span>
+              </div>
+              <Navigation className="h-4 w-4 mx-2" />
+              <div className="flex items-center">
+                <span className="text-sm font-medium">{toName}</span>
+                <MapPin className="h-4 w-4 ml-1" />
+              </div>
             </div>
-            <div className="w-full h-[320px] bg-muted flex items-center justify-center">
-              <p className="text-center px-4">
-                Route map from <strong>{fromName}</strong> to <strong>{toName}</strong> will appear here.
-                <br /><br />
-                To enable this feature, replace "NEED_API_KEY" in RouteMap.tsx with a valid Google Maps API key.
-              </p>
-            </div>
+            <iframe
+              src={mapUrl}
+              width="100%"
+              height="360"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={`Route from ${fromName} to ${toName}`}
+            ></iframe>
           </div>
         )}
       </div>
