@@ -63,6 +63,20 @@ const locations: Location[] = [
     description: "Large urban park with musical fountain",
     image: "https://images.unsplash.com/photo-1572111504021-40abd3479ddb?auto=format&fit=crop&q=80&w=800",
     isPopular: true
+  },
+  {
+    id: 9,
+    name: "Visakhapatnam Railway Station",
+    description: "Main railway station connecting Vizag to major cities",
+    image: "https://images.unsplash.com/photo-1535535112387-56ffe8db21ff?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
+  },
+  {
+    id: 10,
+    name: "Visakhapatnam Airport",
+    description: "International airport serving the city and surrounding regions",
+    image: "https://images.unsplash.com/photo-1599880650988-aa7f3b4055fa?auto=format&fit=crop&q=80&w=800",
+    isPopular: true
   }
 ];
 
